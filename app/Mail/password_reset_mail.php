@@ -7,20 +7,19 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class test_mail extends Mailable
+class password_reset_mail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $details;
     /**
      * Create a new message instance.
      *
      * @return void
      */
+    public $details;
     public function __construct($details)
     {
-        //
-        $this->details=$details;
+       $this->details=$details;
     }
 
     /**
@@ -30,6 +29,6 @@ class test_mail extends Mailable
      */
     public function build()
     {
-        return $this->subject("test mail")->view('mail.send_mail');
+        return $this->subject("new password")->view('mail.send_mail');
     }
 }

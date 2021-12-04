@@ -24,7 +24,7 @@ Route::get('/account', function () {
 //     return view('cart');
 // });
 
-
+Route::get('/send_mail',[Product_Controller::class,'send_mail'])->name("email");
 Route::resource('/products', Product_Controller::class);
 
 Route::resource('/user',User_Controller::class);

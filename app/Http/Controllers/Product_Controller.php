@@ -198,6 +198,7 @@ else{
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         //
@@ -407,4 +408,10 @@ public function remove_cart(Request $r){
     Cart::remove($r->rowid);
     return redirect()->back()->with("success","product remove succesfully");
 }
+
+public function send_mail(Request $R){
+    $mail=' ';
+    return view('mail.forget',compact('mail'));
+
+     }
 }

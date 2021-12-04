@@ -27,7 +27,7 @@
                             <input type="email" name="email" placeholder="Email">
                             <input type="password" name="pass" placeholder="Password">
                             <button type="submit" class="btn">Login</button>
-                            <a href="">Forget Password</a>
+                            <a href="{{ url("/send_mail") }}">Forget Password</a>
                         </form>
 
                         <form  id="RegForm" action="/user" method="POST">
