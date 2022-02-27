@@ -19,6 +19,8 @@ class checkuser
     public function handle(Request $request, Closure $next)
     {
 
+
+
         if($request->has("reg") && $request->has('uname')){
            $res=User::select("name")->where("name","=",$request->get("uname"))->get()->first();
 

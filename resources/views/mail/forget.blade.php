@@ -24,7 +24,7 @@
                 @endif
             </div>
 
-    <form   id="LoginForm" action="/api/send_mail" method="get">
+    <form   id="LoginForm" action="/api/ send_mail" method="get">
         @csrf
         <input type="email" name="email" placeholder="Email">
 

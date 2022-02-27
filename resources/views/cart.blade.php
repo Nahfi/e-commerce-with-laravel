@@ -83,10 +83,14 @@
                 <tr>
                     <td>Total</td>
                     <td>{{ $total_price }}</td>
+
                 </tr>
             </table>
+            <button class="ml-3" onclick="window.location='{{ url('/example1') }}'"     >checkout</button>
         </div>
+     
     </div>
+   
 
     <!-- Footer -->
     <div class="footer">
@@ -125,7 +129,7 @@
                 </div>
             </div>
             <hr>
-            <p class="copyright">Copyright 2020 - Samwit Adhikary</p>
+            <p class="copyright">Copyright 2021 nafiz </p>
         </div>
     </div>
 

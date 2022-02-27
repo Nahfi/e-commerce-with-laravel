@@ -62,6 +62,15 @@ class User_Controller extends Controller
     {
         //
         // return $request->all();
+        $request->validate([
+
+            'uname'=>"required | max:50",
+            'mail'=>"required | unique:users,email",
+            'pass'=>"required | min:6",
+            'mobile'=>"numeric | required | min:11",
+
+
+        ]);
         User::insert([
          'name'=>$request->has("uname")? $request->get('uname') : " ",
          'email'=>$request->has("mail")? $request->get('mail') : " ",

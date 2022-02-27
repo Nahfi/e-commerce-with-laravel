@@ -11,6 +11,17 @@
                 </div>
 
             @endif
+            @if ($errors->any())
+              <div class="aleart alert-warning alert-dismissible fade show">
+
+                <ul>
+                    @foreach ($errors->all() as $er )
+             <li>{{ $er }}</li>
+                    @endforeach
+                </ul>
+
+              </div>
+            @endif
             <div class="row">
                 <div class="col-2">
                     <img src="{{ asset('images/image1.png')}}" width="50%">
@@ -61,7 +72,6 @@
         }
     </script>
 
-    <!-- Toggle Form -->
     <script>
         var LoginForm = document.getElementById("LoginForm");
         var RegForm = document.getElementById("RegForm");
